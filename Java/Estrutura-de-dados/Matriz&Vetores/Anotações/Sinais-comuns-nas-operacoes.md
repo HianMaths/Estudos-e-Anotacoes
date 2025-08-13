@@ -52,4 +52,4 @@
 - `++` **Incrementa 1:** Adiciona 1 ao valor da variável.  
   Exemplo: `a++` (equivale a `a = a + 1`)
 - `--` **Decrementa 1:** Subtrai 1 do valor da variável.  
-  Exemplo: `a--` (equivale a `a = a-1`)
+  Exemplo: `a--` (equivale a `a = a - 1`)
