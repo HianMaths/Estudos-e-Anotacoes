@@ -1,4 +1,3 @@
-package Matriz;
 public class SomaDiagonalMatriz {
 
     public static void main(String[] args) {

@@ -1,4 +1,3 @@
-package Matriz;
 public class MatrizEx {
 
   public static int[][] matriz1 = {

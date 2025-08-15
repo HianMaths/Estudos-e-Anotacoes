@@ -1,4 +1,3 @@
-package Matriz;
 public class MatrizExCorrigido { // Declaração da classe principal
 
     public static int[][] matriz1 = {

@@ -1,4 +1,3 @@
-package Matriz;
 public class Matriz{
    //Imprimir matriz
    //Procurar ocorrencia
