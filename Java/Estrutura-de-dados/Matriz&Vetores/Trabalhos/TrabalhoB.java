@@ -24,16 +24,12 @@ public class TrabalhoB {
          for (int j = 0; j < matriz[i].length; j++) {
             if (i == j && matriz[i][j] != 1) {
                return false;
-            }
-            ;
+            };
             if (i != j && matriz[i][j] != 0) {
                return false;
-            }
-            ;
-
+            };
          }
       }
-
       return true;
    }
 
