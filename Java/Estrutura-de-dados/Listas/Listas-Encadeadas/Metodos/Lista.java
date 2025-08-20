@@ -103,6 +103,64 @@ public class Lista{
           }
           return false;
       }
+      
+   // Remover por valor
+   public void removerPorValor(String nome){
+       if (cabeca == null) return;
+   
+       if (cabeca.nome.equals(nome)) { // está na cabeça
+           cabeca = cabeca.proximo;
+           return;
+       }
+   
+       No atual = cabeca;
+       while (atual.proximo != null && !atual.proximo.nome.equals(nome)) {
+           atual = atual.proximo;
+       }
+   
+       if (atual.proximo != null) { // encontrou
+           atual.proximo = atual.proximo.proximo;
+       }
+   }
+      
+      // Inserir em uma posição específica
+      public void inserirEmPosicao(String novoNome, int posicao) {
+          // Se a posição for negativa, não faz sentido
+          if (posicao < 0) {
+              System.out.println("Posição inválida!");
+              return;
+          }
+      
+          // Criar o novo nó
+          No novoNo = new No();
+          novoNo.nome = novoNome;
+      
+          // Caso 1: inserir no começo
+          if (posicao == 0) {
+              novoNo.proximo = cabeca;
+              cabeca = novoNo;
+              return;
+          }
+      
+          // Percorrer até a posição anterior
+          No atual = cabeca;
+          int contador = 0;
+      
+          while (atual != null && contador < posicao - 1) {
+              atual = atual.proximo;
+              contador++;
+          }
+      
+          // Se atual for null, a posição não existe
+          if (atual == null) {
+              System.out.println("Posição fora do limite da lista!");
+              return;
+          }
+      
+          // Inserir no meio ou no final
+          novoNo.proximo = atual.proximo;
+          atual.proximo = novoNo;
+      }
 
 
    // Imprimir lista com os nomes

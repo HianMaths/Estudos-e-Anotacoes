@@ -25,6 +25,8 @@ public class Principal{
      
      // alunos.limpar();
      // alunos.inverter();
+     alunos.removerPorValor("Pedro");
+     alunos.inserirEmPosicao("Daniel", 0);
      
      System.out.println("Tamanho da lista: " + alunos.tamanho());
      

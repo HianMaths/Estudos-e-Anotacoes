@@ -85,7 +85,7 @@ public void removerFinal(){
 alunos.removerFinal();
 ```
 ---
-#### 4. Remover por valor
+### 4. Remover por valor
 
 Procura um nó que tenha o valor desejado e o remove da lista.
 
@@ -233,6 +233,55 @@ Remover todos os nós de uma vez, simplesmente definindo `cabeça = null`.
 **`Como utilizar o metodo:`**
 ```
 alunos.limpar();
+```
+---
+
+### 10. Inserir em uma posição específica
+Permite adicionar um novo nó em qualquer índice da lista (meio, por exemplo). 
+* Se a posição for 0, é como inserir no começo. 
+* Se a posição for igual ao tamanho da lista, é como inserir no final.
+```java
+public void inserirEmPosicao(String novoNome, int posicao) {
+    // Se a posição for negativa, não faz sentido
+    if (posicao < 0) {
+        System.out.println("Posição inválida!");
+        return;
+    }
+
+    // Criar o novo nó
+    No novoNo = new No();
+    novoNo.nome = novoNome;
+
+    // Caso 1: inserir no começo
+    if (posicao == 0) {
+        novoNo.proximo = cabeca;
+        cabeca = novoNo;
+        return;
+    }
+
+    // Percorrer até a posição anterior
+    No atual = cabeca;
+    int contador = 0;
+
+    while (atual != null && contador < posicao - 1) {
+        atual = atual.proximo;
+        contador++;
+    }
+
+    // Se atual for null, a posição não existe
+    if (atual == null) {
+        System.out.println("Posição fora do limite da lista!");
+        return;
+    }
+
+    // Inserir no meio ou no final
+    novoNo.proximo = atual.proximo;
+    atual.proximo = novoNo;
+}
+```
+**`Como utilizar o metodo:`**
+```
+alunos.InserirEmPosicao("Daniel",4);
 ```
 ---
 
