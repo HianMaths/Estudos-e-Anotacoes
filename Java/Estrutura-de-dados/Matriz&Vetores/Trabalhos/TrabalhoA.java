@@ -1,18 +1,21 @@
 public class TrabalhoA {
-    // Buascar maior valor
-    // Soma de duas matrizes de inteiros
-    // Transposição de matriz
+    // Encontrar maior valor e posição
+    public static int[] encontrarMaiorValor(int[][] matriz) {
+        int maior = Integer.MIN_VALUE;
+        int idx = -1, idy = -1;
 
-    public static int encontrarMaiorValor(int[][] matriz) {
-        int maior = matriz[0][0];
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 if (matriz[i][j] > maior) {
                     maior = matriz[i][j];
+                    idx = i;
+                    idy = j;
                 }
             }
         }
-        return maior;
+
+        // retorna {valor, linha, coluna}
+        return new int[]{maior, idx, idy};
     }
 
     public static int[][] somarMatrizes(int[][] matriz1, int[][] matriz2) {
@@ -25,7 +28,6 @@ public class TrabalhoA {
                 resultado[i][j] = matriz1[i][j] + matriz2[i][j];
             }
         }
-
         return resultado;
     }
 
@@ -55,13 +57,14 @@ public class TrabalhoA {
         int[][] matriz1 = { { 2, 4 }, { 3, 2 } };
         int[][] matriz2 = { { 2, 5 }, { 7, 2 } };
 
-        System.out.println("Maior valor da matriz 1: " + encontrarMaiorValor(matriz1));
+        int[] resultado = encontrarMaiorValor(matriz1);
+        System.out.println("Maior valor da matriz1: " + resultado[0] + 
+                           " encontrado na posição [" + resultado[1] + "][" + resultado[2] + "]");
 
         System.out.println("Soma das matrizes:");
         imprimirMatriz(somarMatrizes(matriz1, matriz2));
 
         System.out.println("Transposta da matriz 1:");
         imprimirMatriz(transporMatriz(matriz1));
-
     }
 }
