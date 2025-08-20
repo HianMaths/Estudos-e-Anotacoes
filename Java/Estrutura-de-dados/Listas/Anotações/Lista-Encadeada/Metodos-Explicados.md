@@ -85,8 +85,40 @@ public void removerFinal(){
 alunos.removerFinal();
 ```
 ---
+#### 4. Remover por valor
 
-### 4. Buscar (pesquisar um valor)
+Procura um nó que tenha o valor desejado e o remove da lista.
+
+* Se o valor estiver no primeiro nó, é igual a removerDoComeco().
+
+* Caso contrário, é preciso percorrer até encontrar e ajustar os ponteiros.
+
+```java
+public void removerPorValor(String nome){
+    if (cabeca == null) return;
+
+    if (cabeca.nome.equals(nome)) { // está na cabeça
+        cabeca = cabeca.proximo;
+        return;
+    }
+
+    No atual = cabeca;
+    while (atual.proximo != null && !atual.proximo.nome.equals(nome)) {
+        atual = atual.proximo;
+    }
+
+    if (atual.proximo != null) { // encontrou
+        atual.proximo = atual.proximo.proximo;
+    }
+}
+```
+**`Como utilizar o metodo:`**
+```
+lista.removerPorValor("Bruno");
+```
+---
+
+### 5. Buscar (pesquisar um valor)
 
 Percorre a lista para verificar se um valor existe.
 
@@ -116,7 +148,7 @@ Percorre a lista para verificar se um valor existe.
 ```
 ---
 
-### 5. Tamanho da lista
+### 6. Tamanho da lista
 
 Conta quantos nós existem na lista.
 
@@ -140,7 +172,7 @@ System.out.println("O tamanho da lista e: " + alunos.tamanho());
 ```
 ---
 
-### 6. Verificar se a lista está vazia
+### 7. Verificar se a lista está vazia
 
 Checar se a referência da **cabeça** é `null`.
 
@@ -151,7 +183,7 @@ Checar se a referência da **cabeça** é `null`.
 
 ---
 
-### 7. Inverter a lista
+### 8. Inverter a lista
 
 Transformar a lista de forma que o último nó vire o primeiro, e assim por diante.
 
@@ -189,7 +221,7 @@ alunos.inverter();
 ```
 ---
 
-### 8. Limpar a lista
+### 9. Limpar a lista
 
 Remover todos os nós de uma vez, simplesmente definindo `cabeça = null`.
 
