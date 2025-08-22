@@ -29,7 +29,7 @@ public void inserirNoFinal(String novoNome) {
    }
 
 ```
-**`Como utilizar o metodo:`**
+**`Como utilizar o método:`**
 ```
 alunos.inserirNoFinal();
 ```
@@ -50,7 +50,7 @@ public void removerComeco(){
        }
    }
 ```
-**`Como utilizar o metodo:`**
+**`Como utilizar o método:`**
 ```
 alunos.removerComeco();
 ```
@@ -80,7 +80,7 @@ public void removerFinal(){
        atual.proximo = null; // remove a ligação com o último
    }
 ```
-**`Como utilizar o metodo:`**
+**`Como utilizar o método:`**
 ```
 alunos.removerFinal();
 ```
@@ -112,7 +112,7 @@ public void removerPorValor(String nome){
     }
 }
 ```
-**`Como utilizar o metodo:`**
+**`Como utilizar o método:`**
 ```
 lista.removerPorValor("Bruno");
 ```
@@ -137,7 +137,7 @@ Percorre a lista para verificar se um valor existe.
           return false;
       }
 ```
-**`Como utilizar o metodo:`**
+**`Como utilizar o método:`**
 ```
      String nomeProcurado = "Lucas";
         if (alunos.buscar(nomeProcurado)) {
@@ -166,7 +166,7 @@ Conta quantos nós existem na lista.
        return contador;
    }
 ```
-**`Como utilizar o metodo:`**
+**`Como utilizar o método:`**
 ```
 System.out.println("O tamanho da lista e: " + alunos.tamanho());
 ```
@@ -215,7 +215,7 @@ vira
        cabeca = anterior; // atualiza a cabeça para o último nó
    }
 ```
-**`Como utilizar o metodo:`**
+**`Como utilizar o método:`**
 ```
 alunos.inverter();
 ```
@@ -230,7 +230,7 @@ Remover todos os nós de uma vez, simplesmente definindo `cabeça = null`.
        cabeca = null; // todos os nós são removidos automaticamente pelo garbage collector
    }
 ```
-**`Como utilizar o metodo:`**
+**`Como utilizar o método:`**
 ```
 alunos.limpar();
 ```
@@ -279,7 +279,7 @@ public void inserirEmPosicao(String novoNome, int posicao) {
     atual.proximo = novoNo;
 }
 ```
-**`Como utilizar o metodo:`**
+**`Como utilizar o método:`**
 ```
 alunos.InserirEmPosicao("Daniel",4);
 ```
