@@ -31,12 +31,12 @@ public void inserirNoFinal(String novoNome) {
 ```
 **`Como utilizar o método:`**
 ```
-alunos.inserirNoFinal();
+alunos.inserirNoFinal("Antonio");
 ```
 
 ---
 
-### 2. Remover do começo
+###  2. Remover do começo
 
 Remove o **primeiro nó** (cabeça).
 
